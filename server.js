@@ -13,8 +13,9 @@ var sessionsController = require('./controllers/sessions.js');
 var app = express();
 
 // ADD THE NAME OF YOUR DATABASE
-// mongoose.connect('mongodb://localhost/<YourDatabaseNameHere>');
-
+// mongoose.connect('mongodb://localhost/course_tracker');
+mongoose.connect('mongodb://localhost/golf_db');
+var db = mongoose.connection;
 app.set('view engine', 'hbs')
 
 app.use(bodyParser.json());
@@ -30,5 +31,9 @@ app.use(session({
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
+
+db.once('open', function() {
+  console.log('database connected');
+});
 
 app.listen(4000);
