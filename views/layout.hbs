@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+      <link rel="stylesheet" href="/style.css" media="screen" title="no title">
     <title>auth</title>
     <style media="screen">
       nav li {
@@ -18,11 +19,11 @@
   <body>
     <nav>
       <ul>
-        <li><a href="/users/signup">signup</a> | </li>
+        <li><a href="/users/signup">sign up</a> | </li>
         <li><a href="/sessions/login">login</a> | </li>
         <li>
           <form method="post" action="/sessions?_method=DELETE">
-            <button>logout</button>
+            <button id="logout">logout</button>
           </form>
         </li>
       </ul>

@@ -10,7 +10,7 @@ var bcrypt = require('bcrypt-nodejs');
 // var coursesController = require('./controllers/courses.js');
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
-
+var coursesController = require('./controllers/courses.js');
 var app = express();
 
 // ADD THE NAME OF YOUR DATABASE
@@ -18,7 +18,7 @@ var app = express();
 mongoose.connect('mongodb://localhost/golf_db');
 var db = mongoose.connection;
 app.set('view engine', 'hbs')
-
+app.use(express.static(__dirname + '/public/styles'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
@@ -33,7 +33,7 @@ app.use(session({
 // app.use('/users/:userId', coursesController);
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
-
+app.use('/courses', coursesController);
 db.once('open', function() {
   console.log('database connected');
 });

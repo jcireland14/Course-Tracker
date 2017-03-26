@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router({mergeParams:true});
 var mongoose = require('mongoose');
-var User = require('../models/user');
-var Courses = require('../models/course');
+var User = require('../models/user.js');
+var Course = require('../models/course.js');
 var authHelpers = require('../helpers/auth.js');
-
 // index courses
 router.get('/', function(req, res) {
     // res.send('courses will be here');
