@@ -2,12 +2,12 @@
   <h4>Welcome {{currentUser.email}}</h4>
 {{/if}}
 
-<!-- {{#each users}} -->
-  <!-- <ul>
+{{#each users}}
+  <ul>
     <li>{{id}}</li>
-    <li>{{email}}</li> -->
-    <!-- <li>{{password_digest}}</li> -->
- <!--    {{/each}} -->
-<!--   </ul> -->
+    <li>{{email}}</li>
+   <!--  <li>{{password_digest}}</li> -->
+    {{/each}}
+  </ul>
 
 <button><a href="/course/new" class="btn btn-default">Create a New Course</a></button>
