@@ -9,35 +9,35 @@ Course.remove({}, function(err) {
 });
 
 var Flourtown = new Course({
-    course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
+    course_name: 'Flourtown CC',
+        city: 'Flourtown',
+        state: 'PA',
+        par: '36',
+        date_played: '6/10/16'
 });
 
 var Ace = new Course({
-    course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
+    course_name: 'Ace CC',
+        city: 'Lafayette Hill',
+        state: 'PA',
+        par: '72',
+        date_played: '6/14/16'
 });
 
 var Sandy_Run = new Course({
-    course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
+    course_name: 'Sandy Run CC',
+        city: 'Oreland',
+        state: 'PA',
+        par: '72',
+        date_played: '5/19/2016'
 });
 
-var Pinehurst = new Course({
-    course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
+var PineCrest = new Course({
+    course_name: 'PineCrest',
+        city: 'Lansdale',
+        state: 'PA',
+        par: '72',
+        date_played: '4/11/16'
 });
 
 
@@ -59,8 +59,8 @@ Sandy_Run.save(function(err) {
   console.log('Sandy Run CC created!');
 });
 
-Pinehurst.save(function(err) {
+PineCrest.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Pinehurst CC created!');
+  console.log('PineCrest CC created!');
 });
