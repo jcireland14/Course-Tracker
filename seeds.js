@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/golf_db');
-
 var Course = require("./models/course");
 
 mongoose.promise = global.Promise;
