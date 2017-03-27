@@ -9,57 +9,58 @@ Course.remove({}, function(err) {
     console.log(err);
 });
 
-var saintExupery = new Course({
-    first_name: 'Antoine',
-    last_name: 'de Saint-Exupery',
-    country: 'France',
-    book_title: 'The Little Prince',
-    publication_year: '1943'
+var Flourtown = new Course({
+    course_name: req.body.course_name,
+        city: req.body.city,
+        state: req.body.state,
+        par: req.body.par,
+        date_played: req.body.date_played
 });
 
-var fforde = new Course({
-    first_name: 'Jasper',
-    last_name: 'Fforde',
-    country: 'England',
-    book_title: 'The Eyre Affair',
-    publication_year: '2001'
+var Ace = new Course({
+    course_name: req.body.course_name,
+        city: req.body.city,
+        state: req.body.state,
+        par: req.body.par,
+        date_played: req.body.date_played
 });
 
-var willig = new Course({
-    first_name: 'Lauren',
-    last_name: 'Willig',
-    country: 'United States',
-    book_title: 'The Secret History of the Pink Carnation',   publication_year: '2000'
+var Sandy_Run = new Course({
+    course_name: req.body.course_name,
+        city: req.body.city,
+        state: req.body.state,
+        par: req.body.par,
+        date_played: req.body.date_played
 });
 
-var lutz = new Course({
-    first_name: 'Lisa',
-    last_name: 'Lutz',
-    country: 'Unites States',
-    book_title: 'The Spellman Files: A Novel',
-    publication_year: '2007'
+var Pinehurst = new Course({
+    course_name: req.body.course_name,
+        city: req.body.city,
+        state: req.body.state,
+        par: req.body.par,
+        date_played: req.body.date_played
 });
 
 
-saintExupery.save(function(err) {
+Flourtown.save(function(err) {
   if (err) console.log(err);
 
   console.log('de Saint-Exupery created!');
 });
 
-fforde.save(function(err) {
+Ace.save(function(err) {
   if (err) console.log(err);
 
   console.log('Fforde created!');
 });
 
-willig.save(function(err) {
+Sandy_Run.save(function(err) {
   if (err) console.log(err);
 
   console.log('Willig created!');
 });
 
-lutz.save(function(err) {
+Pinehurst.save(function(err) {
   if (err) console.log(err);
 
   console.log('Lutz created!');
