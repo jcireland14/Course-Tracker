@@ -8,6 +8,7 @@ var hbs = require('hbs');
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 var db = require('./db');
+var cookieParser = require('cookie-parser');
 // var coursesController = require('./controllers/courses.js');
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
@@ -25,7 +26,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 app.use(methodOverride('_method'));
-
+app.use(cookieParser());
 app.use(session({
   secret: "derpderpderpcats",
   resave: false,

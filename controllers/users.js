@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 var User = require('../models/user.js');
 var authHelpers = require('../helpers/auth.js')
 var Course = require('../models/course.js')
@@ -20,15 +20,23 @@ router.get('/signup', function(req, res){
   res.render('users/signup.hbs')
 });
 
-router.get('/:id', authHelpers.authorize, function(req, res) {
+router.get('/:id', /*authHelpers.authorize,*/ function(req, res) {
+  Course.find({})
+    .exec(function(err, course) {
+      if (err) { console.log(err); }
+
   User.findById(req.params.id)
-  .exec(function(err, user) {
+  .exec(function(err, user, course) {
     if (err) console.log(err);
     console.log(user);
     // res.render('user/show.hbs', { user: user } );
-    res.render('users/show.hbs', { user: user } );
+    res.render('users/show.hbs', {
+      user: user,
+      course: course
+    });
   });
-})
+  });
+    });
 
 router.post('/', authHelpers.createSecure, function(req, res){
   var user = new User({

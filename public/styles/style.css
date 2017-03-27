@@ -6,14 +6,16 @@ body {
   font-size: 18px;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #fce5f4;
 }
 header{
   font-size: 50px;
 }
-#logout{
+
+/*#logout{
   background-color: white;
   color: black;
-}
+}*/
 button{
   color:white;
   background-color: black;

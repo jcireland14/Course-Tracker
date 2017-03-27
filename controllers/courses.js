@@ -6,12 +6,12 @@ var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 // index courses
-router.get('/', function(req, res) {
-    User.findById()
+router.get('/', function indexCourse(req, res) {
+    User.findById(req.params.userId)
         .exec(function(err, user) {
             if(err) console.log(err);
-            console.log(courses);
-            res.render('courses/index', {
+            console.log(user);
+            res.render('courses/index.hbs', {
                   user: user
             });
         });
