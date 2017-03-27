@@ -48,4 +48,4 @@ var CourseModel = mongoose.model('Course', CourseSchema);
 module.exports = {
   User: UserModel,
   Course: CourseModel
-}
+};

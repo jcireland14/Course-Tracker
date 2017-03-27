@@ -1,3 +1,4 @@
+pry = require('pryjs');
 var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -6,7 +7,7 @@ var logger = require('morgan');
 var hbs = require('hbs');
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-
+var db = require('./db');
 // var coursesController = require('./controllers/courses.js');
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
@@ -16,8 +17,9 @@ var app = express();
 // ADD THE NAME OF YOUR DATABASE
 // mongoose.connect('mongodb://localhost/course_tracker');
 mongoose.connect('mongodb://localhost/golf_db');
-var db = mongoose.connection;
+// var db = mongoose.connection;
 app.set('view engine', 'hbs')
+/////\\\\/\\/\/\/\/\/
 app.use(express.static(__dirname + '/public/styles'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

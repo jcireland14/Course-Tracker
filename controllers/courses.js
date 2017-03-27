@@ -1,22 +1,22 @@
 var express = require('express');
 var router = express.Router({mergeParams:true});
-var mongoose = require('mongoose');
-var User = require('../models/user.js');
 var Course = require('../models/course.js');
 var authHelpers = require('../helpers/auth.js');
+// var mongoose = require('mongoose');
+// var User = require('../models/user.js');
+
 // index courses
 router.get('/', function(req, res) {
-    // res.send('courses will be here');
     Course.find({})
         .exec(function(err, courses) {
             if(err) console.log(err);
             console.log(courses);
-            // res.send(courses);
             res.render('courses/index', {
                   courses: courses
             });
         });
 });
+
 // new course
 router.get('/new', function(req, res) {
     res.render('courses/new');
@@ -33,7 +33,6 @@ router.post('/', function(req, res) {
     course.save(function(err, course){
         if (err) { console.log(err); }
         console.log(course);
-        // res.send(course);
         res.render('courses/show', {
             course: course
         });
@@ -45,7 +44,6 @@ router.get('/:id', function(req, res) {
         .exec(function(err, course) {
             if(err) console.log(err);
             console.log(course);
-            // res.send(course);
             res.render('courses/show', {
                 course: course
             });
@@ -73,7 +71,6 @@ router.patch('/:id', function(req, res) {
         .exec(function(err, course) {
             if (err) { console.log(err); }
             console.log(course);
-            // res.send(course);
             res.render('courses/show', {
                 course: course
             });
