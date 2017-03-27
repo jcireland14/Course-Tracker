@@ -6,24 +6,23 @@ var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 // index courses
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
     User.findById(req.params.userId)
         .exec(function(err, user) {
             if(err) console.log(err);
             console.log(user);
             res.render('courses/index.hbs', {
-                  user: user
+              user: user
             });
         });
 });
 
 // new course
 router.get('/new', function(req, res) {
-    User.findById(req.params.userId)
-    .exec(function (err, user){
-      if (err) { console.log(err) }
-    res.render('courses/new');
-});
+    console.log(req.session)
+    res.render('courses/new', {
+        currentUser: req.session.currentUser
+    });
 });
 // create course
 router.post('/', function(req, res) {

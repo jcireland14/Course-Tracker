@@ -20,7 +20,7 @@ router.get('/signup', function(req, res){
   res.render('users/signup.hbs')
 });
 
-router.get('/:id', /*authHelpers.authorize,*/ function(req, res) {
+router.get('/:id', authHelpers.authorize, function(req, res) {
   Course.find({})
     .exec(function(err, course) {
       if (err) { console.log(err); }

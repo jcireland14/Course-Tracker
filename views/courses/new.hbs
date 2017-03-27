@@ -1,3 +1,5 @@
+<pre>{{ currentUser.id }}</pre>
+
 <h1>Create a New Course</h1>
 
 <div class="row">
@@ -29,5 +31,5 @@
 </div>
 
 <!-- <button><a href="/users/{{user.id}}/courses" class="btn btn-default">Back to the Clubhouse</a></button> -->
-<a href="/users/{{user.id}}/courses" class="btn btn-default">My Courses</a>
+<a href="/users/{{currentUser._id}}/courses" class="btn btn-default">My Courses</a>
 <a href="/users" class="btn btn-default">Clubhouse</a>
