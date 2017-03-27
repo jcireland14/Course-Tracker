@@ -35,7 +35,7 @@ app.use(session({
 // app.use('/users/:userId', coursesController);
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
-app.use('/courses', coursesController);
+app.use('/users/:userId/courses', coursesController);
 db.once('open', function() {
   console.log('database connected');
 });

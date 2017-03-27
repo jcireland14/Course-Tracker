@@ -2,17 +2,17 @@ var express = require('express');
 var router = express.Router({mergeParams:true});
 var Course = require('../models/course.js');
 var authHelpers = require('../helpers/auth.js');
-// var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 // index courses
 router.get('/', function(req, res) {
-    Course.find({})
-        .exec(function(err, courses) {
+    User.findById()
+        .exec(function(err, user) {
             if(err) console.log(err);
             console.log(courses);
             res.render('courses/index', {
-                  courses: courses
+                  user: user
             });
         });
 });
@@ -45,7 +45,8 @@ router.get('/:id', function(req, res) {
             if(err) console.log(err);
             console.log(course);
             res.render('courses/show', {
-                course: course
+                course: course,
+                user: user
             });
         });
 });

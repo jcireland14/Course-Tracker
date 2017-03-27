@@ -26,7 +26,7 @@ router.get('/:id', authHelpers.authorize, function(req, res) {
     if (err) console.log(err);
     console.log(user);
     // res.render('user/show.hbs', { user: user } );
-    res.render('course/new.hbs', { user } );
+    res.render('users/show.hbs', { user: user } );
   });
 })
 

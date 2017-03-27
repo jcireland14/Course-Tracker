@@ -1,5 +1,6 @@
 {{#if currentUser}}
   <h4>Welcome {{currentUser.email}}</h4>
+  <a href="/users/{{currentUser._id}}">My Profile</a>
 {{/if}}
 
 {{#each users}}
@@ -10,4 +11,4 @@
     {{/each}}
   </ul>
 
-<button><a href="/course/new" class="btn btn-default">Create a New Course</a></button>
+<button><a href="/users/{{user.id}}/course" class="btn btn-default">Create a New Course</a></button>
