@@ -5,10 +5,10 @@
 
 {{#each users}}
   <ul>
-    <li>{{id}}</li>
+<!--     <li>{{id}}</li> -->
     <li>{{email}}</li>
-    <li>{{password_digest}}</li>
+<!--     <li>{{password_digest}}</li> -->
     {{/each}}
   </ul>
 
-<button><a href="/users/{{user.id}}/courses/new" class="btn btn-default">Create a New Course</a></button>
+<a href="/users/{{user.id}}/courses/new" class="btn btn-default">Add a New Course</a>
