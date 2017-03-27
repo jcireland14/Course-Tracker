@@ -45,23 +45,23 @@ var Pinehurst = new Course({
 Flourtown.save(function(err) {
   if (err) console.log(err);
 
-  console.log('de Saint-Exupery created!');
+  console.log('Flourtown CC created!');
 });
 
 Ace.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Fforde created!');
+  console.log('Ace CC created!');
 });
 
 Sandy_Run.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Willig created!');
+  console.log('Sandy Run CC created!');
 });
 
 Pinehurst.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Lutz created!');
+  console.log('Pinehurst CC created!');
 });
