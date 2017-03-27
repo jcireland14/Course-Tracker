@@ -63,8 +63,11 @@ li {
 
 form{
   margin: 0 auto
-}
 
+}
+.form-group{
+  position: center;
+}
 input[type=text]{
   border: 0;
   outline: 0;

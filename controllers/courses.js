@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 // index courses
-router.get('/', function indexCourse(req, res) {
+router.get('/', function(req, res) {
     User.findById(req.params.userId)
         .exec(function(err, user) {
             if(err) console.log(err);
@@ -19,7 +19,11 @@ router.get('/', function indexCourse(req, res) {
 
 // new course
 router.get('/new', function(req, res) {
+    User.findById(req.params.userId)
+    .exec(function (err, user){
+      if (err) { console.log(err) }
     res.render('courses/new');
+});
 });
 // create course
 router.post('/', function(req, res) {

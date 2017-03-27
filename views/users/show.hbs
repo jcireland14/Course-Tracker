@@ -13,14 +13,15 @@
   {{/each}}
   </ul>
 {{else}}
-  <h2> <a href="/users/{{use.id}}/courses/new">Add a course!</a></h2>
+  <h2> <a href="/users/{{user.id}}/courses/new">Add a course!</a></h2>
 {{/if}}
 
 
 
 <a href="/users" class="btn btn-default">Clubhouse</a>
-<!-- <a href="/users/{{user.id}}/edit" class="btn btn-danger">Edit Profile</a> -->
+<!-- <a href="/users/{{user.id}}/edit" class="btn btn-default">Edit Profile</a> -->
 <a href="/users/{{user.id}}/courses" class="btn btn-default">My Courses</a>
+
 <form method="post" action="/sessions/remove_?method=DELETE">
 <input type="submit" value="LOG OUT"/>
 </form>
