@@ -81,31 +81,38 @@ router.get('/:id/edit', function(req, res) {
 });
 // update course
 router.patch('/:id', function(req, res) {
-    Course.findByIdAndUpdate(req.params.id, {
-        course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
-    }, {new: true})
-        .exec(function(err, course) {
+    User.findById(req.params.userId)
+        .exec(function(err, user) {
             if (err) { console.log(err); }
-            console.log(course);
+            console.log(user);
+
+            const course = user.course.id(req.params.id)
+            course.set(req.body)
+
+            user.save()
+
             res.render('courses/show', {
-                course: course
+                course: course,
+                user: user
             });
         });
 });
 
 // delete course
-router.delete('/:id', function(req, res) {
-    Course.findByIdAndRemove(req.params.id)
-        .exec(function(err, course) {
+router.delete('/:id/courses/:courseId', function(req, res) {
+    User.findById(req.params.id)
+        .exec(function(err, user) {
             if (err) { console.log(err); }
-
             console.log( 'Course deleted.');
+
+            const course = user.course.id(req.params.courseId)
+            course.set(req.body)
+            course.remove()
             // redirect back to the index route
-            res.redirect('/courses');
+            res.redirect('/courses', {
+            course: course,
+            user: user
+        });
         });
 });
 
