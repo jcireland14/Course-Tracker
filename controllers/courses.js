@@ -20,27 +20,31 @@ router.get('/', function (req, res) {
 
 // new course
 router.get('/new', function(req, res) {
-    console.log(req.session)
+    console.log(req.session.currentUser)
     res.render('courses/new', {
         currentUser: req.session.currentUser
     });
 });
 // create course
 router.post('/', function(req, res) {
-    var course = new Course({
-        course_name: req.body.course_name,
-        city: req.body.city,
-        state: req.body.state,
-        par: req.body.par,
-        date_played: req.body.date_played
-    });
-    course.save(function(err, course){
-        if (err) { console.log(err); }
-        console.log(course);
-        res.render('courses/show', {
-            course: course
+    User.findById(req.params.userId)
+        .exec(function(err, user) {
+            var newCourse = new Course({
+                course_name: req.body.course_name,
+                city: req.body.city,
+                state: req.body.state,
+                par: req.body.par,
+                date_played: req.body.date_played
+            });
+
+            user.course.push(newCourse)
+            user.save(function(err, user){
+                if (err) { console.log(err); }
+                console.log(user);
+                console.log('TESTTESTTEST');
+                res.redirect(`/users/${user.id}/courses`);
+            });
         });
-    });
 });
 
 // show course
