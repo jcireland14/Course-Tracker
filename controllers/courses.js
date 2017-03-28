@@ -62,18 +62,9 @@ router.get('/:id', function(req, res) {
             });
         });
 });
-// edit course
-// router.get('/:id/edit', function(req,res) {
-//     Course.findById(req.params.id)
-//     .exec(function(err, course) {
-//         if (err) { console.log(err); }
-//         res.render('courses/edit', {
-//             course: course
-//         });
-//     });
-// });
+
 //////////EDIT #2??
-router.get('/:id/edit', function editCourse(req, res) {
+router.get('/:id/edit', function(req, res) {
  User.findById(req.params.userId)
    .exec(function (err, user){
      if (err) { console.log(err); }
