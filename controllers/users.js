@@ -4,6 +4,8 @@ var User = require('../models/user.js');
 var authHelpers = require('../helpers/auth.js')
 var Course = require('../models/course.js')
 
+
+
 router.get('/', function(req, res) {
   console.log(req.session)
   User.find({})
@@ -16,10 +18,12 @@ router.get('/', function(req, res) {
   });
 })
 
+////Sign Up
 router.get('/signup', function(req, res){
   res.render('users/signup.hbs')
 });
 
+///Show
 router.get('/:id', authHelpers.authorize, function(req, res) {
   Course.find({})
     .exec(function(err, course) {
@@ -38,6 +42,7 @@ router.get('/:id', authHelpers.authorize, function(req, res) {
   });
     });
 
+///user login registered
 router.post('/', authHelpers.createSecure, function(req, res){
   var user = new User({
     email: req.body.email,
