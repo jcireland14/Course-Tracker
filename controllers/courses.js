@@ -41,6 +41,7 @@ router.post('/', function(req, res) {
         });
     });
 });
+
 // show course
 router.get('/:id', function(req, res) {
     Course.findById(req.params.id)
