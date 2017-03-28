@@ -1,12 +1,17 @@
+html{
+
+}
 body {
-  background: url("http://il6.picdn.net/shutterstock/videos/5336960/thumb/2.jpg?i10c=img.resize(height:160)");
-  background-position: 80% 42%;
+background: url("http://il6.picdn.net/shutterstock/videos/5336960/thumb/2.jpg?i10c=img.resize(height:160)");
+  background-size: cover;
+/*  background-position: 0;*/
   font-family: 'Cormorant', serif;
   text-align: center;
   font-size: 18px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: stretch;
   background-color: #fce5f4;
+/*add media query to keep background size when page is adjusted*/
 }
 header{
   font-size: 50px;
