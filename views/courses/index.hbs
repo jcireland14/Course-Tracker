@@ -1,14 +1,16 @@
 
-  <h1>{{user.email}}</h1>
+<h1>{{user.email}}</h1>
+<!-- <h1>{{user.id}}</h1> -->
 
 <ul>
   {{#each courses}}
-    <li>{{course_name}}</li>
-
+    <li><a href="/users/{{../user.id}}/courses/{{this.id}}">{{this.course_name}}</a></li>
   {{/each}}
 </ul>
 
   <a href="/users/{{user.id}}/courses/new" class="btn btn-default">Add a New Course</a>
-  <a href="/courses/{{user.id}}/edit" class="btn btn-default">Edit Course</a>
+<br>
+<!--   <a href="/users/{{user.id}}/courses/edit" class="btn btn-default">Edit Course</a> -->
+
   <a href="/users" class="btn btn-default">Clubhouse</a>
 

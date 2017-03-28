@@ -49,10 +49,13 @@ router.post('/', function(req, res) {
 
 // show course
 router.get('/:id', function(req, res) {
-    Course.findById(req.params.id)
-        .exec(function(err, course) {
+    User.findById(req.params.userId)
+        .exec(function(err, user) {
             if(err) console.log(err);
+
+            const course = user.course.id(req.params.id);
             console.log(course);
+
             res.render('courses/show', {
                 course: course,
                 user: user
@@ -60,14 +63,30 @@ router.get('/:id', function(req, res) {
         });
 });
 // edit course
-router.get('/:id/edit', function(req,res) {
-    Course.findById(req.params.id)
-    .exec(function(err, course) {
-        if (err) { console.log(err); }
-        res.render('courses/edit', {
-            course: course
-        });
-    });
+// router.get('/:id/edit', function(req,res) {
+//     Course.findById(req.params.id)
+//     .exec(function(err, course) {
+//         if (err) { console.log(err); }
+//         res.render('courses/edit', {
+//             course: course
+//         });
+//     });
+// });
+//////////EDIT #2??
+router.get('/:id/edit', function editCourse(req, res) {
+ User.findById(req.params.userId)
+   .exec(function (err, user){
+     if (err) { console.log(err); }
+     console.log(user);
+
+     var editCourse = user.course.id(req.params.id);
+     console.log(editCourse);
+     // var editCourse = user.course.find(function (course) { return course.id === req.params.courseId })
+     res.render('courses/edit', {
+         course: editCourse,
+         user: user
+     });
+   })
 });
 // update course
 router.patch('/:id', function(req, res) {

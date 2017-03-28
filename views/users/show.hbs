@@ -5,19 +5,21 @@
 </ul> -->
 <!-- <h1>My Profile</h1> -->
 <h1>{{user.email}}'s Profile</h1>
+<!-- <h1>{{user.id}}</h1> -->
 <!-- <p>{{course.course_name}}</p> -->
 
-  <ul>
+  <!-- <ul>
   {{#each user.course}}
     <li>{{this.course_name}}</li>
-
+    <li>{{this.city}}</li>
+    <a href="/users/{{../user.id}}/courses/{{this.id}}/edit" class="btn btn-default">Edit Course</a>
   {{/each}}
-  </ul>
+  </ul> -->
 
 
-
+<a href="/users/{{user.id}}/courses" class="btn btn-default">View All Courses</a>
 <a href="/users/{{user.id}}/courses/new" class="btn btn-default">Add a New Course</a>
-<a href="/courses/{{user.id}}/edit" class="btn btn-default">Edit Course</a>
+
 <a href="/users" class="btn btn-default">Clubhouse</a>
 <!-- <a href="/users/{{user.id}}/edit" class="btn btn-default">Edit Profile</a> -->
 <!-- <a href="/users/{{user.id}}/courses" class="btn btn-default">My Courses</a>
