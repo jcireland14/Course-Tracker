@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/golf_db');
 var Course = require("./models/course");
-var User  = require("./models/user");
+var User = require("./models/user");
 mongoose.promise = global.Promise;
 
 Course.remove({}, function(err) {
