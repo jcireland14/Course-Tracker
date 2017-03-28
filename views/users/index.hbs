@@ -1,14 +1,15 @@
 {{#if currentUser}}
   <h4>Welcome {{currentUser.email}}</h4>
   <a href="/users/{{currentUser._id}}">My Profile</a>
+  <br>
+  <a href="/users/{{currentUser._id}}/courses/new" class="btn btn-default">Add a New Course</a>
 {{/if}}
 
-{{#each users}}
-  <ul>
+<!-- {{#each users}}
+  <ul> -->
 <!--     <li>{{id}}</li> -->
-    <li>{{email}}</li>
+   <!--  <li>{{email}}</li> -->
 <!--     <li>{{password_digest}}</li> -->
-    {{/each}}
-  </ul>
+  <!--   {{/each}}
+  </ul> -->
 
-<a href="/users/{{currentUser._id}}/courses/new" class="btn btn-default">Add a New Course</a>
