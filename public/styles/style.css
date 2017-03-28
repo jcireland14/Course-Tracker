@@ -1,5 +1,6 @@
 body {
-background: url("http://il6.picdn.net/shutterstock/videos/5336960/thumb/2.jpg?i10c=img.resize(height:160)");
+  background: url("https://cdn.pixabay.com/photo/2015/05/28/10/12/sunset-787826_960_720.jpg");
+/*background: url("http://il6.picdn.net/shutterstock/videos/5336960/thumb/2.jpg?i10c=img.resize(height:160)");*/
   background-size: cover;
 /*  background-position: 0;*/
   font-family: 'Cormorant', serif;
