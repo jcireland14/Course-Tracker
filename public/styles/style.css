@@ -1,69 +1,26 @@
-/*bootsnip for login/ signup*/
-  body {
-    padding-top: 15px;
-    font-size: 12px
-  }
-  .main {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .login-or {
-    position: relative;
-    font-size: 18px;
-    color: #aaa;
-    margin-top: 10px;
-            margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .span-or {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -2px;
-    margin-left: -25px;
-    background-color: #fff;
-    width: 50px;
-    text-align: center;
-  }
-  .hr-or {
-    background-color: #cdcdcd;
-    height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  h3 {
-    text-align: center;
-    line-height: 300%;
-  }
-/*my original css*/
 body {
 
-  background: url("https://cdn.pixabay.com/photo/2015/05/28/10/12/sunset-787826_960_720.jpg");
-/*background: url("http://il6.picdn.net/shutterstock/videos/5336960/thumb/2.jpg?i10c=img.resize(height:160)");*/
+  background: url('http://www.sportbop.co.nz/images/Golfer---sunset---EVES-5-Course-Classic.jpg');
+background-size: cover;
   background-size: cover;
-/*  background-position: 0;*/
-  font-family: 'Cormorant', serif;
+  font-family: 'McLaren'; serif;
   text-align: center;
   font-size: 18px;
-  background-repeat: no-repeat;
-  background-position: stretch;
-  background-color: #fce5f4;
-/*add media query to keep background size when page is adjusted*/
+   background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 header{
   font-size: 50px;
 }
+/*#btn {
+  background-color: #788776;
+}*/
 
-/*#logout{
-  background-color: white;
-  color: black;
-}*/
-/*button{
-  color:white;
-  background-color: black;
-  border-radius: 25px;
-}*/
+
 h4{
   color: white;
 }
@@ -73,6 +30,7 @@ nav li {
 }
 a {
   text-decoration: none;
+  color: white;
 }
 nav form {
   display: inline;
@@ -82,9 +40,9 @@ h1,h2,h3{
   text-align: center;
 }
 
-a, a:visited {
+/*a, a:visited {
     color: white;
-}
+}*/
 
 #main-heading{
   font-size: 3em;
@@ -108,6 +66,7 @@ form{
   margin: 0 auto
 
 }
+
 .form-group{
   position: center;
 }
@@ -119,6 +78,7 @@ input[type=text]{
   width: 350px;
   font-size: 24px;
   margin-bottom: 0.5em;
+
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -157,7 +117,7 @@ input[type=submit]{
   display:inline-block;
   cursor:pointer;
   color:#666666;
-  font-family:Arial;
+  font-family:'McLaren'; serif;
   font-size:15px;
   font-weight:bold;
   padding:6px 24px;

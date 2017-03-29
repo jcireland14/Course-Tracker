@@ -1,8 +1,8 @@
-<!-- <form action="/users" method="post">
-  <div>
+<form action="/users" method="post">
+  <!-- <div>
     <label for="username">username</label>
     <input type="text" name="username">
-  </div>
+  </div> -->
   <div>
     <label for="email">email</label>
     <input type="text" name="email">
@@ -10,8 +10,9 @@
 
   <div>
     <label for="password">password</label>
-    <input type="text" name="password">
+    <input type="text" name="password" pattern=".{6,}">
+    <p>Password must contain 6 or more characters<p>
   </div>
-
+<!-- pattern=".{6,}" password character requirement -->
   <input type="submit" value="Submit">
-</form> -->
+</form>
