@@ -6,9 +6,9 @@ Golf course and score tracker application
 
 [Heroku Link](https://mighty-island-41722.herokuapp.com/users)
 
-[App Wireframe](#)
+[App Wireframe](http://imgur.com/H6xhXJ3)
 
-[Portfolio Site](#)
+[Portfolio Site](http://julian-ireland-chandler.bitballoon.com/)
 ## App Overview
 
 Fore! Tracker is an application intended to keep track of golf courses that a user has played and also some information about their round at the course.
