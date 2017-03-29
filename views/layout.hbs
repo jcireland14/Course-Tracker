@@ -20,7 +20,31 @@
   </head>
   <body>
   <header>FORE! Tracker</header>
-    <nav>
+  <div class="container">
+  <div class="row">
+    <div class="main">
+      <h3>Please Log In, or <a href="#">Sign Up</a></h3>
+      <div class="login-or">
+        <hr class="hr-or">
+        <span class="span-or">or</span>
+      </div>
+      <form action="/sessions/login" method="post"role="form">
+        <div class="form-group">
+          <label for="inputUsernameEmail">Email</label>
+          <input type="text" class="form-control" id="inputUsernameEmail">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword">
+        </div>
+        <button type="submit" class="btn btn btn-primary">
+          Log In
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+    <!-- <nav>
       <ul>
         <li><a href="/users/signup" >sign up</a> | </li>
         <li><a href="/sessions/login">login</a> | </li>
@@ -30,7 +54,7 @@
           </form>
         </li>
       </ul>
-    </nav>
+    </nav> -->
     {{{body}}}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

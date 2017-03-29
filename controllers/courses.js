@@ -99,22 +99,23 @@ router.patch('/:id', function(req, res) {
 });
 
 // delete course
-router.delete('/:id/courses/:courseId', function(req, res) {
-    User.findById(req.params.id)
+// /users/:userId/courses  /:id
+router.delete('/:courseId', function(req, res) {
+    User.findById(req.params.userId)
         .exec(function(err, user) {
-            if (err) { console.log(err); }
+            if (err) { return console.log(err); }
             console.log( 'Course deleted.');
 
             const course = user.course.id(req.params.courseId)
-            course.set(req.body)
+            // course.set(req.body)
             course.remove()
+
+            user.save()
             // redirect back to the index route
-            res.redirect('/courses', {
-            course: course,
-            user: user
-        });
+            res.redirect(`/users/${req.params.userId}/courses`);
         });
 });
+
 
 
 module.exports = router;
