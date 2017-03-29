@@ -19,7 +19,9 @@ header{
 /*#btn {
   background-color: #788776;
 }*/
-
+p{
+  font-size: 15px;
+}
 
 h4{
   color: white;
@@ -69,6 +71,7 @@ form{
 
 .form-group{
   position: center;
+  color: white;
 }
 input[type=text]{
   border: 0;

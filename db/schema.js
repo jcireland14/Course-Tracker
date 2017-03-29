@@ -4,11 +4,14 @@ var Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
 var CourseSchema = new Schema({
-    course_name: String,
+    courseName: String,
     city: String,
     state: String,
     par: String,
-    date_played: Date
+    myScore: String,
+    ball: String,
+    comments: String,
+    datePlayed: Date
 });
 
 CourseSchema.pre('save', function(next) {

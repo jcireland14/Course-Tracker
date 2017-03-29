@@ -30,11 +30,14 @@ router.post('/', function(req, res) {
     User.findById(req.params.userId)
         .exec(function(err, user) {
             var newCourse = new Course({
-                course_name: req.body.course_name,
+                courseName: req.body.courseName,
                 city: req.body.city,
                 state: req.body.state,
                 par: req.body.par,
-                date_played: req.body.date_played
+                myScore: req.body.myScore,
+                ball: req.body.ball,
+                comments: req.body.comments,
+                datePlayed: req.body.datePlayed
             });
 
             user.course.push(newCourse)
