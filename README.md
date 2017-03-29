@@ -4,11 +4,11 @@
 
 Golf course and score tracker application
 
-[Heroku Link] (#)
+[Heroku Link](#)
 
 [App Wireframe](#)
 
-[Portfolio Site] (#)
+[Portfolio Site](#)
 ## App Overview
 
 Fore! Tracker is an application intended to keep track of golf courses that a user has played and also some information about their round at the course.

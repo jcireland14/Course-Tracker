@@ -13,19 +13,18 @@ background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-#round{
-  color: white;
-}
+
 header{
   font-size: 50px;
 }
-/*#btn {
-  background-color: #788776;
-}*/
+
 p{
   font-size: 15px;
 }
-
+.row{
+  position: relative;
+  left: 0%;
+}
 h4{
   color: white;
 }
@@ -45,9 +44,7 @@ h1,h2,h3{
   text-align: center;
 }
 
-/*a, a:visited {
-    color: white;
-}*/
+
 
 #main-heading{
   font-size: 3em;
@@ -72,10 +69,11 @@ form{
 
 }
 
-.form-group{
+/*.form-group{
   position: center;
-  color: white;
-}
+  /*color: white;*/
+
+
 input[type=text]{
   border: 0;
   outline: 0;
