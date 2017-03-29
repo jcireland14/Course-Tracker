@@ -1,77 +1,63 @@
-# Boilerplate Project 2
+# FORE-tracker-app
 
-This is boilerplate for your Express project, so there are several things you'll need to add, create and change before you're ready to start working on your project.
+## Application Name: Fore! Tracker
 
-1. You'll need to create your project two repo and clone or create it locally.
+Golf course and score tracker application
 
-2. You'll copy the boilerplate code to your project two repo.
+[Heroku Link] (#)
 
-  Your file structure should look like the following:
+[App Wireframe](#)
 
-  ```
-    |- MySweetProject
-    |
-    | -- controllers
-    | -- db
-    | -- helpers
-    | -- models
-    | -- public
-    | -- views
-    | -- package.json
-    | -- server.js
-  ```
-3. Update the package.json
+[Portfolio Site] (#)
+## App Overview
 
-  - Update the name of your project. It's currently called `"name": "boilerplate"`.
-  - Update the author of your project from `"author": "boilerplate"` to your name.
+Fore! Tracker is an application intended to keep track of golf courses that a user has played and also some information about their round at the course.
 
-4. Update the server file
+The intention of this app is to keep track of the course a user has played so that they no longer need to keep score cards to see what they scored at a specific course helping with generating a handicap for them later.
 
-  - `mongoose.connect` is currently commented out. Uncomment it and complete the URL with the name of *YOUR* database.
+## Unsolved/future features:
+* Just cleaner CSS
 
-# What does the boilerplate contain?
 
-The basic file and directory structure.
+## Stretch Goals
+* Administrator log-in
+* Add/upload image to user course page
 
-#### controllers
 
-Including the template for `sessions.js` and `users.js` controllers. The routes are not filled in but are set up with the correct middleware.
+## Entity Relationship Diagrams (Database Modeling)
 
-#### Models/Schema
+User = {
+  username: String,
+  password: String,
+  created_at: Date,
+  updated_at: Date,
+  course:[CourseSchema]
+}
 
-There is a default user set up with email, password_digest, created_at and updated_at. You can modify the attributes of the user as much as you want or need. You might not want users to signup with email for example. It's up to *you.*
+Course = {
+    courseName: String,
+    city: String,
+    state: String,
+    par: String,
+    myScore: String,
+    ball: String,
+    comments: String,
+    datePlayed: Date
+}
 
-#### Public directory
 
-No content exists in the public directory.
+## Technologies Used
 
-#### Views, user views, and layout
+  * Languages - HTML5, CSS3, Javascript, Express, Handlebars, Mongoose, Bcrypt, Cookie-Parser, Method-override, jQuery, bootstrap
+  * Design -  Google Fonts
+  * Project Planning & User Stories - [Trello](https://trello.com/b/DjHs2r0x/wdi-project-two)
+  * Sublime Text 3
 
-The view directory contains a users directory which has two empty views for login and signup as well as a layout file.
 
-#### Package.json
 
-You'll still need to update the package.json, but the basic modules you need are already there:
 
-  - bcrypt
-  - body-parser
-  - express
-  - express-session
-  - hbs
-  - method-override
-  - mongoose
-  - morgan`
 
-#### server.js
 
-With all the configuration for method-override, body-parser, morgan, sessions, express, mongoose, and HBS.
 
-The configuration for loading/routing to the users and sessions controller.
 
-The only thing *NOT* included is the configuration for serving the public directory statically. You'll need to set that up yourself.
 
-# What is NOT included
-
-- Content in the views
-- Code in the routes
-- configuration for serving the public directory statically
