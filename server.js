@@ -50,4 +50,4 @@ db.once('open', function() {
   console.log('database connected');
 });
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
