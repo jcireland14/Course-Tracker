@@ -13,6 +13,9 @@ background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+#round{
+  color: white;
+}
 header{
   font-size: 50px;
 }
