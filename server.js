@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -19,6 +20,7 @@ var app = express();
 // mongoose.connect('mongodb://localhost/golf_db');
 // var db = mongoose.connection;
 mongoose.connect(process.env.MONGODB_URI)
+
 
 mongoose.connection.on('error', function(err) {
   console.error('MongoDB connection error: ' + err);
