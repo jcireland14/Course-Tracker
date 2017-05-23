@@ -17,11 +17,11 @@ var app = express();
 
 // ADD THE NAME OF YOUR DATABASE
 // mongoose.connect('mongodb://localhost/course_tracker');
-mongoose.connect('mongodb://localhost/golf_db');
+// mongoose.connect('mongodb://localhost/golf_db');
 // var db = mongoose.connection;
 
 
-// mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
 
 
 mongoose.connection.on('error', function(err) {
